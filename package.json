@@ -1,0 +1,45 @@
+{
+  "name": "demo",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint .",
+    "bundle:android:test": "./build.sh -e test -b android",
+    "bundle:ios:test": "./build.sh -e test -b ios",
+    "bundle:android:release": "./build.sh -e release -b android",
+    "bundle:ios:release": "./build.sh -e release -b ios",
+    "bundle:test": "./build.sh -e test",
+    "bundle:release": "./build.sh -e release",
+    "pack:android:test": "./build.sh -e test -a android -b android",
+    "pack:ios:test": "./build.sh -e test -a ios -b ios",
+    "pack:test": "./build.sh -e test -a ios:android",
+    "pack:android:release": "./build.sh -e release -a android -b android",
+    "pack:ios:release": "./build.sh -e release -a ios -b ios",
+    "pack:release": "./build.sh -e release -a ios:android",
+    "channel:android:test": "./build.sh -e test -c -a android -b android",
+    "channel:test": "./build.sh -e test -c -a ios:android",
+    "channel:android:release": "./build.sh -e release -c -a android -b android",
+    "channel:release": "./build.sh -e release -c -a ios:android"
+  },
+  "dependencies": {
+    "react": "16.13.1",
+    "react-native": "0.63.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.18.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.64.0",
+    "react-test-renderer": "16.13.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
